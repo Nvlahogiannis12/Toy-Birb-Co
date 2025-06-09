@@ -50,26 +50,54 @@ let customReviews = [
   {
     Rating: "5 Stars",
     Name: "Josh",
-    Comment: "Great Would Recommend",
+    Review: "Great Would Recommend",
     Time: "5/12/90",
   },
   {
     Rating: "5 Stars",
     Name: "Gordon",
-    Comment:
-      "How do i exit this page. I was just trying to order a pizza for my grandkiddos.",
+    Review:
+      "How do I exit this page. I was just trying to order a pizza for my grandkiddos.",
     Time: "12/31/19",
   },
   {
     Rating: "5 Stars",
     Name: "Hylia",
-    Comment: "Looking for excellent tool to use against Demons",
+    Review: "Looking for excellent tool to use against Demons",
     Time: "2/14/08",
   },
   {
     Rating: "5 Stars",
     Name: "Las Pancake",
-    Comment: "I like wood",
+    Review: "I like wood",
     Time: "4/25/20",
   },
 ];
+
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.getElementById("reviewList");
+
+  const render = (list) => {
+    grid.innerHTML = "";
+
+    list.forEach((review, index) => {
+      const col = document.createElement("div");
+      col.className = "col-6 col-lg-2";
+
+      col.innerHTML = `
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-1">${review.Name}</h5>
+            <div class="badge bg-warning text-dark mb-2">${review.Rating}</div>
+            <p class="card-text small">${review.Review}</p>
+            <div class="text-muted small">${review.Time}</div>
+          </div>
+        </div>
+      `;
+
+      grid.appendChild(col);
+    });
+  };
+
+  render(customReviews);
+});

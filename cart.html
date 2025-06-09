@@ -22,49 +22,20 @@
 
   <header>
  <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary word">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="imgs/LBTCo BW bird logo ORANGE.png" class="navimg">
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav" class="navbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="review.html"
-                  >Reviews</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="cart.html"
-                  >Cart</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contact.html"
-                  >Contact Us</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="products.html"
-                  >Products</a
-                >
-              </li>
+  <div class="container">
+        <!-- Menu icon at the top left -->
+        <div class="menu-icon" id="menuIcon">☰</div>
+        <!-- Sidebar with links -->
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="index.html" onclick="selectPage(event)">Home</a></li>
+                <li><a href="products.html" onclick="selectPage(event)">Products</a></li>
+                <li><a href="cart.html" onclick="selectPage(event)">Cart</a></li>
+                <li><a href="review.html" onclick="selectPage(event)">Reviews</a></li>
+                <li><a href="contact.html" onclick="selectPage(event)">Contact</a></li>
             </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+
 
     <main></main>
 

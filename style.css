@@ -1,11 +1,7 @@
 body{
     width:100%;
     height:100%;
-}
-
-.navimg{
-    height: 5%;
-    width: 5%;
+    margin: 0;
 }
 
 /* Top menu icon */
@@ -65,3 +61,36 @@ body{
   margin-bottom: 20px;
   font-size: xx-large;
 }
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  /* Stack the content vertically on mobile */
+  .main-container {
+    flex-direction: column;
+  }
+
+  /* Sidebar takes full width on mobile */
+  .sidebar {
+    left: -100%; /* Initially hidden off-screen on mobile */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .sidebar.open {
+    left: 0; /* Visible when 'open' class is added */
+  }
+
+  /* Stack left and right divs vertically on small screens */
+  .content-row {
+    flex-direction: column;
+  }
+}
+
+.bigimg{
+  background-color: black;
+  border: 2px solid red;
+  width: 200px;
+  height: 100px;
+  color: white; /* Optional: for visible text */
+  padding: 10px;
+}
+
+

@@ -44,3 +44,32 @@ function selectPage(event) {
 links.forEach((link) => {
   link.addEventListener("click", selectPage);
 });
+
+// ---------------- GENERATE THE Reviews ---------------- //
+let customReviews = [
+  {
+    Rating: "5 Stars",
+    Name: "Josh",
+    Comment: "Great Would Recommend",
+    Time: "5/12/90",
+  },
+  {
+    Rating: "5 Stars",
+    Name: "Gordon",
+    Comment:
+      "How do i exit this page. I was just trying to order a pizza for my grandkiddos.",
+    Time: "12/31/19",
+  },
+  {
+    Rating: "5 Stars",
+    Name: "Hylia",
+    Comment: "Looking for excellent tool to use against Demons",
+    Time: "2/14/08",
+  },
+  {
+    Rating: "5 Stars",
+    Name: "Las Pancake",
+    Comment: "I like wood",
+    Time: "4/25/20",
+  },
+];

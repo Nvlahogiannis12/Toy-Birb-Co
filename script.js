@@ -49,12 +49,6 @@ links.forEach((link) => {
 let customReviews = [
   {
     Rating: "5 Stars",
-    Name: "Josh",
-    Review: "Great Would Recommend",
-    Time: "5/12/90",
-  },
-  {
-    Rating: "5 Stars",
     Name: "Gordon",
     Review:
       "How do I exit this page. I was just trying to order a pizza for my grandkiddos.",
@@ -62,13 +56,7 @@ let customReviews = [
   },
   {
     Rating: "5 Stars",
-    Name: "Hylia",
-    Review: "Looking for excellent tool to use against Demons",
-    Time: "2/14/08",
-  },
-  {
-    Rating: "5 Stars",
-    Name: "Las Pancake",
+    Name: "En Lamas",
     Review: "I like wood",
     Time: "4/25/20",
   },
@@ -80,9 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const render = (list) => {
     grid.innerHTML = "";
 
-    list.forEach((review, index) => {
+    list.forEach((review) => {
       const col = document.createElement("div");
-      col.className = "col-6 col-lg-2";
+      col.className = "col-12";
 
       col.innerHTML = `
         <div class="card h-100 shadow-sm">

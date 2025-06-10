@@ -113,6 +113,10 @@ body{
   top: 0px; 
 }
 
+.footimg{
+  width: 5%;
+  height: 5%}
+
 /* Div One: Split text and image evenly */
 .one .text-content,
 .one .image-content {
@@ -206,4 +210,12 @@ textarea{
     margin: 0 !important;
     padding: 0 !important;
   }
+}
+
+a[aria-label="Home"] {
+  text-decoration: none;
+}
+
+.home-txt{
+  
 }

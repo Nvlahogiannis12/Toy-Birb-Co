@@ -88,12 +88,11 @@ body{
 
 .bannerimg{
   position:relative;
-
   background-color: black;
   border: 2px solid red;
   width: 200px;
   height: 100px;
-  color: white; /* Optional: for visible text */
+  color: white;
   padding: 10px;
   padding-left: 50%;
   padding-right: 50%;
@@ -101,15 +100,110 @@ body{
 }
 
 .bigimg{
-  position: relative;
+  position: absolute;
   background-color: black;
   border: 2px solid blue;
   width: 200px;
   height: 100px;
-  color: white; /* Optional: for visible text */
+  color: white;
   padding: 10px;
   padding-left: 50%;
   padding-right: 50%;
   z-index: 10;
-  top: -277px;
+  top: 0px; 
+}
+
+/* Div One: Split text and image evenly */
+.one .text-content,
+.one .image-content {
+  width: 50%;
+}
+
+/* Style the image in Div One */
+.one .custom-img {
+  width: 100%; /* Take full width of the 50% container */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.two .text-content,
+.two .image-content {
+  width: 50%;
+}
+
+.two .custom-img {
+  width: 100%; /* Take full width of the 50% container */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.three .text-content,
+.three .image-content {
+  width: 50%;
+}
+
+.three .custom-img {
+  width: 100%; /* Take full width of the 50% container */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.four .text-content,
+.four .image-content {
+  width: 50%;
+}
+
+.four .custom-img {
+  width: 100%; /* Take full width of the 50% container */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Center main container */
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.press-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+}
+
+.press-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.light-container {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  width: 100%;
+}
+
+.light-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+textarea{
+  width:100%;
+}
+.reviews .row {
+  padding: 0;
+  margin: 0;
+  .col-6 {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }

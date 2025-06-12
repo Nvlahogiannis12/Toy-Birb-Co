@@ -46,7 +46,7 @@ links.forEach((link) => {
 });
 
 // ---------------- GENERATE THE Reviews ---------------- //
-let customReviews = [
+const customReviews = [
   {
     Rating: "5 Stars",
     Name: "Gordon",
@@ -61,11 +61,11 @@ let customReviews = [
     Time: "4/25/20",
   },
 ];
-
+let render;
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("reviewList");
 
-  const render = (list) => {
+  render = (list) => {
     grid.innerHTML = "";
 
     list.forEach((review) => {
@@ -89,3 +89,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   render(customReviews);
 });
+
+function submitReview() {
+  let customerName = document.getElementById("textCommentName").value;
+  let customerComment = document.getElementById("commentArea").value;
+  customReviews.push({
+    Rating: "5 stars",
+    Name: customerName,
+    Review: customerComment,
+    Time: new Date().toLocaleDateString(),
+  });
+  render(customReviews);
+}

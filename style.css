@@ -217,5 +217,10 @@ a[aria-label="Home"] {
 }
 
 .home-txt{
-  
+
+}
+
+.home-list{
+  margin-left: 25%;
+  margin-right: 25%;
 }

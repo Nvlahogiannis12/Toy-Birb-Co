@@ -3,7 +3,7 @@ const allCarousels = document.querySelectorAll(".carousel-container");
 const allCarouselData = [
   [
     { src: "imgs/colored-train-img.png", description: "Carousel 1 slide 1" },
-    { src: "imgs/image2.jpg", description: "Carousel 1 slide 2" },
+    { src: "imgs/colored-train-img2.png", description: "Carousel 1 slide 2" },
     { src: "imgs/image3.jpg", description: "Carousel 1 slide 3" },
   ],
   [
@@ -21,7 +21,7 @@ const allCarouselData = [
 allCarousels.forEach((carousel, index) => {
   const images = allCarouselData[index];
   let currentIndex = 0;
-
+  console.log(carousel);
   const imgElement = carousel.querySelector(".carouselImage");
   const descElement = carousel.querySelector(".description p");
   const prevBtn = carousel.querySelector(".prevBtn");

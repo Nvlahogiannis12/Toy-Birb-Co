@@ -21,7 +21,7 @@ const allCarouselData = [
 allCarousels.forEach((carousel, index) => {
   const images = allCarouselData[index];
   let currentIndex = 0;
-  console.log(carousel);
+
   const imgElement = carousel.querySelector(".carouselImage");
   const descElement = carousel.querySelector(".description p");
   const prevBtn = carousel.querySelector(".prevBtn");
@@ -29,19 +29,29 @@ allCarousels.forEach((carousel, index) => {
 
   function updateCarousel() {
     imgElement.src = images[currentIndex].src;
+    imgElement.alt = images[currentIndex].description;
     descElement.textContent = images[currentIndex].description;
   }
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateCarousel();
-  });
+  // Initialize with first image
+  updateCarousel();
 
-  nextBtn.addEventListener("click", () => {
+  // Image click advances to next slide
+  imgElement.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % images.length;
     updateCarousel();
   });
 
-  // Initialize first image
-  updateCarousel();
+  // If you still want buttons to work:
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateCarousel();
+    });
+  }
 });

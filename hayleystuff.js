@@ -2,14 +2,23 @@ const allCarousels = document.querySelectorAll(".carousel-container");
 
 const allCarouselData = [
   [
-    { src: "imgs/colored-train-img.png", description: "Carousel 1 slide 1" },
-    { src: "imgs/colored-train-img2.png", description: "Carousel 1 slide 2" },
-    { src: "imgs/image3.jpg", description: "Carousel 1 slide 3" },
+    {
+      src: "imgs/car2.jpg",
+      description:
+        "Wooden Car (All ages): This heirloom-quality wooden car is a timeless treasure. Handcrafted from domestic and exotic hardwoods with a clear lacquer finish, this unique car will inspire generations of imaginative play. Please note potential choking hazards for small children.",
+    },
+    { src: "imgs/car3.jpg", description: "" },
+    { src: "imgs/car4.jpg", description: "" },
+    { src: "imgs/car1.jpg", description: "" },
   ],
   [
-    { src: "imgs/image4.jpg", description: "Carousel 2 slide 1" },
-    { src: "imgs/image5.jpg", description: "Carousel 2 slide 2" },
-    { src: "imgs/image6.jpg", description: "Carousel 2 slide 3" },
+    {
+      src: "imgs/plane3.jpg",
+      description:
+        "Wooden Car (All ages): This heirloom-quality wooden car is a timeless treasure. Handcrafted from domestic and exotic hardwoods with a clear lacquer finish, this unique car will inspire generations of imaginative play. Please note potential choking hazards for small children.",
+    },
+    { src: "imgs/plane1.jpg", description: "" },
+    { src: "imgs/plane2.jpg", description: "" },
   ],
   [
     { src: "imgs/image7.jpg", description: "Carousel 3 slide 1" },
@@ -32,7 +41,15 @@ allCarousels.forEach((carousel, index) => {
     imgElement.alt = images[currentIndex].description;
     descElement.textContent = images[currentIndex].description;
   }
+  function updateCarousel() {
+    imgElement.src = images[currentIndex].src;
+    imgElement.alt = images[currentIndex].description;
 
+    // Only update description if not the first carousel
+    if (index !== 0) {
+      descElement.textContent = images[currentIndex].description;
+    }
+  }
   // Initialize with first image
   updateCarousel();
 

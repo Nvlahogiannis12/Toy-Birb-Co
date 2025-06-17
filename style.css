@@ -3,7 +3,7 @@ body{
     height:100%;
     margin: 0;
     padding: 0;
-    background-color: rgb(198, 255, 255);
+    background-color: rgb(255, 228, 198);
 }
 
 /* Top menu icon */
@@ -86,34 +86,11 @@ body{
   }
 }
 
-.bannerimg{
-  position:relative;
-  width: 200px;
-  height: 100px;
-  color: white;
-  padding: 10px;
-  padding-left: 50%;
-  padding-right: 50%;
-  padding-bottom: 20%;
-}
-
-.bigimg{
-  position: absolute;
-  background-color: black;
-  border: 2px solid blue;
-  width: 200px;
-  height: 100px;
-  color: white;
-  padding: 10px;
-  padding-left: 50%;
-  padding-right: 50%;
-  z-index: 10;
-  top: 0px; 
-}
 
 .footimg{
   width: 5%;
-  height: 5%}
+  height: 5%
+}
 
 /* Div One: Split text and image evenly */
 .one .text-content,
@@ -174,11 +151,12 @@ body{
   }
 
   .carousel-btn {
-    background-color: transparent;
+    background-color: lightblue;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     color: #333;
+    border-radius: 7px;
   }
 
   .carousel-btn:hover {
@@ -234,7 +212,10 @@ a[aria-label="Home"] {
 }
 
 .home-txt{
-
+background-color:  rgb(198, 255, 255);
+border: solid black 10px;
+border-radius: 40px;
+padding:0px;
 }
 
 .home-list{
@@ -248,4 +229,33 @@ a[aria-label="Home"] {
 }
 .titleing{
   font-family: "childTitle";
+}
+
+.newimg{
+  height: 40%;
+  width: 40%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.bannerimg{
+    width:100%;
+    height:50%;
+  object-fit: cover;
+    object-position: center;
+}
+#fix {
+  width: 100%;
+  height: 80vh !important;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-left: 50px; /* Moves the element 50px to the right */
+}
+
+.contactContainer{
+background-color:  rgb(198, 255, 255);
+border: solid black 10px;
+border-radius: 40px;
+padding:10px;
 }

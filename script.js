@@ -92,9 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function submitReview() {
   let customerName = document.getElementById("textCommentName").value;
+  let starsAmount = document.getElementById("starSelection").value;
   let customerComment = document.getElementById("commentArea").value;
   customReviews.push({
-    Rating: "5 stars",
+    Rating: starsAmount,
     Name: customerName,
     Review: customerComment,
     Time: new Date().toLocaleDateString(),

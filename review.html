@@ -31,40 +31,42 @@
     </nav>
   </header>
 
-  <main class="row">
-    <div class="col-6">
-      <div id="reviewList" class="row g-3"></div>
-    </div>
-
-    <div class="col-6">
-      <!-- Form-->
+  <main class="container py-4">
+  <div class="row g-4">
+    <!-- Left: Form -->
+    <div class="col-12 col-md-6">
       <h1 class="titleing">Leave A Review:</h1>
       <form id="nameForm" class="mb-4">
         <div class="mb-3">
-          <input type="text" class="form-control" id="textCommentName" placeholder="Enter your Name">
+          <input type="text" class="form-control" id="textCommentName" placeholder="Enter your Name" />
         </div>
-        <!--Stars-->
         <div class="mb-3">
           <label for="starSelection" class="form-label">Rating</label>
-          <select id="starSelection" class="form-select" placeholder="Choose Amount of Stars">
-            <option value="1 Star">One Star</option>
-            <option value="2 Star">Two Star</option>
-            <option value="3 Star">Three Star</option>
-            <option value="4 Star">Four Star</option>
-            <option value="5 Star">Five Star</option>
+          <select id="starSelection" class="form-select">
+            <option value="⭐">One Star</option>
+            <option value="⭐⭐">Two Stars</option>
+            <option value="⭐⭐⭐">Three Stars</option>
+            <option value="⭐⭐⭐⭐">Four Stars</option>
+            <option value="⭐⭐⭐⭐⭐">Five Stars</option>
           </select>
         </div>
-        <!--Comment-->
         <div class="mb-3">
-          <textarea placeholder="Comment..." rows="5" cols="100" id="commentArea"></textarea>
+          <textarea class="form-control" placeholder="Comment..." rows="5" id="commentArea"></textarea>
         </div>
-
         <div class="btn btn-primary w-100" onclick="submitReview()">Submit</div>
-
       </form>
       <div id="result"></div>
     </div>
-  </main>
+
+    <!-- Right: Review List -->
+    <div class="col-12 col-md-6">
+      <div id="reviewWrapper" class="overflow-auto border rounded p-3" style="max-height: 600px;">
+        <div id="reviewList" class="row g-3"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
   <footer class="site-footer bg-light py-4 mt-5 text-center text-muted">
     <p>© 2025 Little Bird Toys • 43 Main Street, Toms River, NJ 08753 • (732) 555-1234</p>
     <div class="social-btns mt-3">

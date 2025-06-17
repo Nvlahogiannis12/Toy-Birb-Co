@@ -3,6 +3,8 @@ const menuIcon = document.getElementById("menuIcon");
 const sidebar = document.getElementById("sidebar");
 const links = document.querySelectorAll(".sidebar a");
 let isSidebarOpen = false;
+let productsInCart = [];
+let cartList = [];
 
 // Event listener to handle clicking the menu icon
 menuIcon.addEventListener("click", () => {
@@ -102,3 +104,25 @@ function submitReview() {
   });
   render(customReviews);
 }
+
+function addingToCart(item) {
+  productsInCart.push(item);
+  alert(productsInCart);
+}
+
+window.addEventListener("beforeunload", () => {
+  if (document.querySelector("body").id == "products")
+    sessionStorage.setItem("cart", JSON.stringify(productsInCart));
+});
+
+window.addEventListener("load", () => {
+  if (document.querySelector("body").id == "cart") {
+    cartList = JSON.parse(sessionStorage.getItem("cart"));
+    alert(cartList);
+  }
+  if (document.querySelector("body").id == "products") {
+    if (sessionStorage.getItem("cart"))
+      productsInCart = JSON.parse(sessionStorage.getItem("cart"));
+    else productsInCart = [];
+  }
+});

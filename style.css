@@ -317,3 +317,14 @@ form#nameForm .btn:hover {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
+.fancifyButton{
+  background-color:cyan;
+  border:solid black 2px;
+  border-radius: 5px;
+}
+.fancifyButton:hover{
+  background-color:darkcyan;
+  border:solid black 2px;
+  border-radius: 5px;
+  color:white;
+}

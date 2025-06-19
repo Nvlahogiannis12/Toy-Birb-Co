@@ -105,9 +105,10 @@ function submitReview() {
   render(customReviews);
 }
 
-function addingToCart(item) {
+function addingToCart(itemName, itemPrice) {
+  const item = { name: itemName, price: itemPrice };
   productsInCart.push(item);
-  alert(productsInCart);
+  productsInCart.push(item);
 }
 
 window.addEventListener("beforeunload", () => {
@@ -118,7 +119,7 @@ window.addEventListener("beforeunload", () => {
 window.addEventListener("load", () => {
   if (document.querySelector("body").id == "cart") {
     cartList = JSON.parse(sessionStorage.getItem("cart"));
-    alert(cartList);
+    renderCart();
   }
   if (document.querySelector("body").id == "products") {
     if (sessionStorage.getItem("cart"))
@@ -126,3 +127,31 @@ window.addEventListener("load", () => {
     else productsInCart = [];
   }
 });
+
+
+function renderCart() {
+  if (document.querySelector("body").id !== "cart") return;
+
+  const container = document.getElementById("cartItems");
+  container.innerHTML = "";
+
+  if (!cartList || cartList.length === 0) {
+    container.innerHTML = "<p>Your cart is empty.</p>";
+    return;
+  }
+
+  cartList.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "card shadow-sm mb-3";
+    card.style.padding = "1rem";
+
+    card.innerHTML = `
+      <div class="card-body">
+        <h5 class="card-title">${item.name || "Unnamed Product"}</h5>
+        <p class="card-text">Price: $${item.price?.toFixed(2) || "0.00"}</p>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}

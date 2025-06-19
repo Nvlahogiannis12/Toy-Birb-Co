@@ -328,3 +328,10 @@ form#nameForm .btn:hover {
   border-radius: 5px;
   color:white;
 }
+#cart{
+  text-align:center;
+}
+.itemCards{
+  background-color:darkcyan;
+  color:white;
+}

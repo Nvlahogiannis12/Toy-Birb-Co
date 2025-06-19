@@ -108,7 +108,6 @@ function submitReview() {
 function addingToCart(itemName, itemPrice) {
   const item = { name: itemName, price: itemPrice };
   productsInCart.push(item);
-  productsInCart.push(item);
 }
 
 window.addEventListener("beforeunload", () => {
@@ -146,7 +145,7 @@ function renderCart() {
     card.style.padding = "1rem";
 
     card.innerHTML = `
-      <div class="card-body">
+      <div class="card-body itemCards">
         <h5 class="card-title">${item.name || "Unnamed Product"}</h5>
         <p class="card-text">Price: $${item.price?.toFixed(2) || "0.00"}</p>
       </div>
